@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">写诗管理</string>
+    <string name="title_section1">背景管理</string>
+    <string name="title_section2">字体管理</string>
+    <string name="title_section3">暂无管理</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_backs_manage">BacksManageActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_fonts_manage">FontsManageActivity</string>
+
+</resources>

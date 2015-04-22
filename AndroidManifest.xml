@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.poetry.platformtool"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <!-- 读取SD卡权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 网络状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 设备编号权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 广告新增权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".application.ToolApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BacksManageActivity"
+            android:label="@string/title_activity_backs_manage" >
+        </activity>
+        <activity
+            android:name=".FontsManageActivity"
+            android:label="@string/title_activity_fonts_manage" >
+        </activity>
+
+        <!--
+		<meta-data android:name="WAPS_ID" android:value="b6a563e2e4451f98b47370b05827cd9a" />
+		<meta-data android:name="WAPS_PID" android:value="lenovo" /> 
+        -->
+        <!-- 网络状态监听服务 -->
+        <receiver
+            android:name="com.andframe.broadcast.ConnectionChangeReceiver"
+            android:label="NetworkConnection" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.poetry.WelcomeAvtivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+
+            <!--
+                 <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.poetry.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" >
+                </action>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.poetry.AppAboutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.FeedbackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.FeedbacksActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.TagedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.SutraActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.FontsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.FontDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.BacksActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.BackDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.AppSettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.poetry.HelperActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
